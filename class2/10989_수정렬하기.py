@@ -4,7 +4,7 @@
 # 모두 0인 배열을 만들고,
 # index를 활용해서 배열을 정렬해준다.
 
-import sys 
+import sys  
 
 N = int(sys.stdin.readline())
 nums = [0] * 10001
