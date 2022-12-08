@@ -14,5 +14,3 @@ for i in range(1, N-K+1):
     mul_N_K = mul_N_K * i
 
 print(mul_N // (mul_K * mul_N_K))
-
-
