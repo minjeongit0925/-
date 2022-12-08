@@ -1,4 +1,4 @@
-# N K => 이항계수를 구하는 프로그램 
+# N K => 이항계수를 구하는 프로그램
 
 N, K = list(map(int, input().split()))
 mul_N = 1
