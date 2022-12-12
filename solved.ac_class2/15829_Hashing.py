@@ -23,3 +23,5 @@ num = int(input())
 str = input()
 
 # 알파벳마다 숫자에 대입
+if 'a' in str:
+    
