@@ -19,9 +19,23 @@
     해시 값
 '''
 
-num = int(input())
+L = int(input())
 str = input()
 
+resultStr = []
+ans = 0
+
 # 알파벳마다 숫자에 대입
-if 'a' in str:
-    
+for i in str:
+    resultStr.append(ord(i) - 96)  
+    # 아스키코드 값이 'a' = 97 'b' = 98 ... ord(i)는 특정 문자의 아스키코드 값으로 변환
+
+def Hash(resultStr):
+    result = 0
+
+    for i in range(len(resultStr)):
+        ans = resultStr[i] * (31 ** i)
+        result += ans
+    return print(result % 1234567891)  # %1234567891을 안해서 50점 맞았음.
+
+Hash(resultStr)
