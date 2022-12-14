@@ -15,7 +15,8 @@
 '''
 
 """
-# 첫 시도 => 시간 초과
+    # 첫 시도 => 시간 초과
+    
     import sys
 
     A, B = map(int, sys.stdin.readline().split())
