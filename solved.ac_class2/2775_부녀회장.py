@@ -35,7 +35,7 @@ for _ in range(T):
 
     for i in range(k):
         for j in range(1, n):
-            list[j] += list[j-1]
+            list[j] += list[j-1] # 이전 값 누적해서 더하기
         
-    print(list[-1])
+    print(list[-1]) # 배열의 마지막 값
 
