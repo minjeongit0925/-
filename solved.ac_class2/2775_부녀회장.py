@@ -23,6 +23,7 @@
     1층 1호 ~ : 1명, 1+2명, 1+2+3명, 1+2+3+4명 ~
     2층 1호 ~ : 1명, 1+1+2명, 1+1+2+1+2+3명, 1+1+2+1+2+3+1+2+3+4명, ~
     ...
+    k층 1호 ~ n호 : 1명, 1 + 
 '''
 
 T = int(input())
@@ -30,5 +31,11 @@ T = int(input())
 for _ in range(T):
     k = int(input())
     n = int(input())
+    list = [x for x in range(1, n+1)]
 
+    for i in range(k):
+        for j in range(1, n):
+            list[j] += list[j-1]
+        
+    print(list[-1])
 
