@@ -17,19 +17,24 @@
     같은건 한번만 출력
 '''
 
-N = int(input())
+import sys
+
+N = int(sys.stdin.readline())
 
 words = []
 
 for _ in range(N):
     words.append(input())
 
-words.sort(key=len)
+words_set = set(words) # 단어 중복 제거 => {}형으로 바뀜.
 
-for i in range(len(words)):
-    if i + 1 == len(words):
-            break
-    elif words[i] == words[i+1]:
-        words.remove(words[i+1])
+words = list(words_set) # {} => []
 
-print(words)
+words.sort() # 알파벳 순으로 정렬
+words.sort(key = len) # 단어 길이 순으로 정렬
+
+for word in words:
+    print(word)
+
+# 메모리 35168KB
+# 시간 820ms
