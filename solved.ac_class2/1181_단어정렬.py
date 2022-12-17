@@ -27,7 +27,9 @@ for _ in range(N):
 words.sort(key=len)
 
 for i in range(len(words)):
-    if words[i] == words[i+1]:
+    if i + 1 == len(words):
+            break
+    elif words[i] == words[i+1]:
         words.remove(words[i+1])
 
 print(words)
