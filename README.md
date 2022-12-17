@@ -7,15 +7,15 @@
    
    #### Chapter 01. 자료구조
    
-   [📝 자료구조 notion 강의노트 연결](https://dapper-pea-0ac.notion.site/e6dc9fa2dc484c4a914a957e89e1bc84){:target="_blank"}
+   [📝 자료구조 notion 강의노트 연결](https://dapper-pea-0ac.notion.site/e6dc9fa2dc484c4a914a957e89e1bc84){: target="_blank"}
    
    #### Chapter 02. 완전탐색
    
-   [📝 완전탐색 notion 강의노트 연결](https://dapper-pea-0ac.notion.site/Brute-force-ece6037ace3e462a832b42545d0a89d5){:target="_blank"}
+   [📝 완전탐색 notion 강의노트 연결](https://dapper-pea-0ac.notion.site/Brute-force-ece6037ace3e462a832b42545d0a89d5){: target="_blank"}
    
    #### Chapter 03. 탐욕법
    
-   [📝 탐욕법 notion 강의노트 연결](https://dapper-pea-0ac.notion.site/Brute-force-ece6037ace3e462a832b42545d0a89d5){:target="_blank"}
+   [📝 탐욕법 notion 강의노트 연결](https://dapper-pea-0ac.notion.site/Brute-force-ece6037ace3e462a832b42545d0a89d5){: target="_blank"}
    
 
 ## solved.ac
