@@ -16,6 +16,9 @@
    #### Chapter 03. 탐욕법
    
    [📝 탐욕법 notion 강의노트 연결](https://dapper-pea-0ac.notion.site/Brute-force-ece6037ace3e462a832b42545d0a89d5)
+
+   #### Chapter 04. DFS, BFS, 백트래킹
+   [📝 DFS, BFS, 백트래킹 notion 강의노트 연결](https://dapper-pea-0ac.notion.site/DFS-BFS-f6bd8056c9f64e8b83e0fbe8cb9ac17f)
    
 
 ## solved.ac
