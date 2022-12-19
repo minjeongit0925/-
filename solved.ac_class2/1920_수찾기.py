@@ -16,3 +16,19 @@
     존재하면 1, 존재하지 않으면 0
 '''
 
+"""
+# 첫번째 시도
+    import sys
+
+    N = int(sys.stdin.readline())
+    A = list(map(int, sys.stdin.readline().split()))
+
+    M = int(sys.stdin.readline())
+    B = list(map(int, sys.stdin.readline().split()))
+
+    for i in range(len(B)):
+        if B[i] in A:
+            print(1)
+        else:
+            print(0)
+"""
