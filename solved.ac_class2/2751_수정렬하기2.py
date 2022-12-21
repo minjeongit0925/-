@@ -13,3 +13,9 @@
 '''
     오름차순으로 정렬
 '''
+
+N = int(input())
+nums = []
+for _ in range(N):
+    nums.append(int(input()))
+
