@@ -22,6 +22,7 @@ for i in range(N):
     age, name = map(str, input().split())
     user.append([int(age), name])
 
-user.sort()
+user.sort(key=lambda x:x[0])
+
 for i in range(len(user)):
     print(user[i][0], user[i][1])
