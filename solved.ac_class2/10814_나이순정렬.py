@@ -15,3 +15,13 @@
 '''
     나이 순, 나이가 같으면 가입한 순으로 정렬
 '''
+
+N = int(input())
+user = []
+for i in range(N):
+    age, name = map(str, input().split())
+    user.append([int(age), name])
+
+user.sort()
+for i in range(len(user)):
+    print(user[i][0], user[i][1])
