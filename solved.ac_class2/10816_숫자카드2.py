@@ -20,12 +20,13 @@
     첫째 줄에 입력으로 주어진 M개의 수에 대해서, 
     각 수가 적힌 숫자 카드를 상근이가 몇 개 가지고 있는지를 공백으로 구분해 출력한다.
 '''
+import sys 
 
-N = int(input())
-cardNums = list(map(int, input().split()))
+N = int(sys.stdin.readline())
+cardNums = list(map(int, sys.stdin.readline().split()))
 
-M = int(input())
-findNums = list(map(int, input().split()))
+M = int(sys.stdin.readline())
+findNums = list(map(int, sys.stdin.readline().split()))
 
 count = 0
 countList = []
@@ -38,4 +39,5 @@ for findNum in findNums:
     count = 0
             
 
-print(countList)
+for answer in countList:
+    print(answer, end=' ')
