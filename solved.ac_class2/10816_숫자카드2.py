@@ -20,7 +20,36 @@
     첫째 줄에 입력으로 주어진 M개의 수에 대해서, 
     각 수가 적힌 숫자 카드를 상근이가 몇 개 가지고 있는지를 공백으로 구분해 출력한다.
 '''
-import sys 
+
+# 첫번째 시도 -> 시간 초과
+"""
+    import sys
+
+    N = int(sys.stdin.readline())
+    cardNums = list(map(int, sys.stdin.readline().split()))
+
+    M = int(sys.stdin.readline())
+    findNums = list(map(int, sys.stdin.readline().split()))
+
+    count = 0
+    countList = []
+
+    for findNum in findNums:
+        for cardNum in cardNums:
+            if cardNum == findNum:
+                count += 1
+        countList.append(count)
+        count = 0
+                
+
+    for answer in countList:
+        print(answer, end=' ')
+"""
+
+# 두번째 시도 -> 내장 모듈 counter 이용
+
+from collections import Counter
+import sys
 
 N = int(sys.stdin.readline())
 cardNums = list(map(int, sys.stdin.readline().split()))
@@ -28,16 +57,10 @@ cardNums = list(map(int, sys.stdin.readline().split()))
 M = int(sys.stdin.readline())
 findNums = list(map(int, sys.stdin.readline().split()))
 
-count = 0
-countList = []
+count = Counter(cardNums)
 
 for findNum in findNums:
-    for cardNum in cardNums:
-        if cardNum == findNum:
-            count += 1
-    countList.append(count)
-    count = 0
-            
-
-for answer in countList:
-    print(answer, end=' ')
+    if findNum in count:
+        print(count[findNum], end=' ')
+    else:
+        print(0, end=' ')
