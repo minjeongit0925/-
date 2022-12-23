@@ -57,7 +57,8 @@ cardNums = list(map(int, sys.stdin.readline().split()))
 M = int(sys.stdin.readline())
 findNums = list(map(int, sys.stdin.readline().split()))
 
-count = Counter(cardNums)
+count = Counter(cardNums) # Counter({10: 3, 3: 2, -10: 2, 6: 1, 2: 1, 7: 1})
+# 각 항목별로 몇 개 있는지 셈.
 
 for findNum in findNums:
     if findNum in count:
