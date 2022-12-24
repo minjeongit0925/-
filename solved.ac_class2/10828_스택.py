@@ -15,4 +15,36 @@
 '''
     명령이 주어질 때마다, 한줄에 하나씩 출력
 '''
+import sys
 
+N = int(sys.stdin.readline())
+stack = []
+
+for _ in range(N):
+    orders = sys.stdin.readline().split()
+    order = orders[0]
+
+    if order == "push":
+        number = orders[1]
+        stack.append(number)
+
+    elif order == "pop":
+        if len(stack) == 0:
+            print(-1)
+        else:
+            print(stack.pop())
+
+    elif order == "size":
+        print(len(stack))
+    
+    elif order == "empty":
+        if len(stack) == 0:
+            print(1)
+        else:
+            print(0)
+    
+    elif order == "top":
+        if len(stack) == 0:
+            print(-1)
+        else:
+            print(stack[-1])
