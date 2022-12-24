@@ -21,11 +21,11 @@ N = int(sys.stdin.readline())
 stack = []
 
 for _ in range(N):
-    orders = sys.stdin.readline().split()
-    order = orders[0]
+    orders = sys.stdin.readline().split() # 두개를 입력받음.
+    order = orders[0] # 앞에 요소를 받음.
 
     if order == "push":
-        number = orders[1]
+        number = orders[1] # 뒤에 요소를 받음.
         stack.append(number)
 
     elif order == "pop":
