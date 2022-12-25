@@ -16,3 +16,43 @@
 '''
     출력해야하는 명령이 주어질 때마다, 한 줄에 하나씩 출력한다.
 '''
+
+import sys
+queue = []
+
+N = int(sys.stdin.readline())
+
+for _ in range(N):
+    orders = sys.stdin.readline().split() # 두개를 입력받음.
+    order = orders[0] # 앞에 요소를 받음.
+
+    if order == "push":
+        number = orders[1]
+        queue.append(number)
+
+    elif order == "pop":
+        if len(queue) == 0:
+            print(-1)
+        else:
+            print(queue.pop())
+        
+    elif order == "size":
+        print(len(queue))
+    
+    elif order == "empty":
+        if len(queue) == 0:
+            print(1)
+        else:
+            print(0)
+    
+    elif order == "front":
+        if len(queue) == 0:
+            print(-1)
+        else:
+            print(queue[0])
+
+    elif order == "back":
+        if len(queue) == 0:
+            print(-1)
+        else:
+            print(queue[-1])
