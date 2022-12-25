@@ -34,7 +34,7 @@ for _ in range(N):
         if len(queue) == 0:
             print(-1)
         else:
-            print(queue.pop())
+            print(queue.pop(0)) # pop(0)을 하면 첫번째 데이터를 제거할 수 있다.
         
     elif order == "size":
         print(len(queue))
