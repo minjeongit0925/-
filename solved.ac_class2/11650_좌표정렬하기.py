@@ -18,12 +18,12 @@
 import sys
 
 N = int(sys.stdin.readline())
-location = []
+locations = []
 
 for _ in range(N):
     x, y = map(int, sys.stdin.readline().split())
-    location.append([x, y])
+    locations.append([x, y])
 
-location.sort()
-
-print(location)
+locations.sort()
+for i in range(len(locations)):
+    print(locations[i][0], locations[i][1])
