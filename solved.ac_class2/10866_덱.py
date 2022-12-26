@@ -31,26 +31,26 @@ for _ in range(N):
 
     if order == "push_front":
         X = orders[1]
-        deque.insert(0, X)
+        deque.insert(0, X) # 앞에 삽입
     
     elif order == "push_back":
         X = orders[1]
-        deque.append(X)
+        deque.append(X) # 뒤에 삽입
     
     elif order == "pop_front":
         if len(deque) == 0:
             print(-1)
         else:
-            print(deque.pop(0))
+            print(deque.pop(0)) # 맨 앞 요소 뺌
     
     elif order == "pop_back":
         if len(deque) == 0:
             print(-1)
         else:
-            print(deque.pop())
+            print(deque.pop()) # 맨 뒷 요소 뺌
         
     elif order == "size":
-        print(len(deque))
+        print(len(deque)) # 길이
     
     elif order == "empty":
         if len(deque) == 0:
@@ -62,10 +62,10 @@ for _ in range(N):
         if len(deque) == 0:
             print(-1)
         else:
-            print(deque[0])
+            print(deque[0]) # 맨 앞 요소 출력
     
     elif order == "back":
         if len(deque) == 0:
             print(-1)
         else:
-            print(deque[-1])
+            print(deque[-1]) # 맨 뒷 요소 출력
