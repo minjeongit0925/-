@@ -18,3 +18,54 @@
 '''
     출력해야하는 명령이 주어질 때마다, 한 줄에 하나씩 출력한다.
 '''
+
+import sys
+
+N = int(sys.stdin.readline())
+
+deque = []
+
+for _ in range(N):
+    orders = sys.stdin.readline().split()
+    order = orders[0]
+
+    if order == "push_front":
+        X = orders[1]
+        deque.insert(0, X)
+    
+    elif order == "push_back":
+        X = orders[1]
+        deque.append(X)
+    
+    elif order == "pop_front":
+        if len(deque) == 0:
+            print(-1)
+        else:
+            print(deque.pop(0))
+    
+    elif order == "pop_back":
+        if len(deque) == 0:
+            print(-1)
+        else:
+            print(deque.pop())
+        
+    elif order == "size":
+        print(len(deque))
+    
+    elif order == "empty":
+        if len(deque) == 0:
+            print(1)
+        else:
+            print(0)
+    
+    elif order == "front":
+        if len(deque) == 0:
+            print(-1)
+        else:
+            print(deque[0])
+    
+    elif order == "back":
+        if len(deque) == 0:
+            print(-1)
+        else:
+            print(deque[-1])
