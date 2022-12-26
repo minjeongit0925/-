@@ -15,3 +15,15 @@
 '''
     첫째 줄부터 N개의 줄에 점을 정렬한 결과를 출력한다.
 '''
+import sys
+
+N = int(sys.stdin.readline())
+location = []
+
+for _ in range(N):
+    x, y = map(int, sys.stdin.readline().split())
+    location.append([x, y])
+
+location.sort()
+
+print(location)
