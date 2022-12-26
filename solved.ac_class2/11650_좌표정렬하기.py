@@ -24,6 +24,7 @@ for _ in range(N):
     x, y = map(int, sys.stdin.readline().split())
     locations.append([x, y])
 
-locations.sort()
+locations.sort() # y좌표까지 판단해서 정렬됨.
+
 for i in range(len(locations)):
     print(locations[i][0], locations[i][1])
