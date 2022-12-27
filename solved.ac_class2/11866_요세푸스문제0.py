@@ -22,3 +22,19 @@
     예제와 같이 요세푸스 순열을 출력한다.
 '''
 
+import sys
+
+N, K = map(int, sys.stdin.readline().split())
+people = [i for i in range(1, N+1)]
+result = []
+count = 0
+
+for i in range(len(people)):
+    count += K - 1
+    if count >= len(people):
+        count = count % len(people) # 
+    result.append(str(people.pop(count)))
+
+print("<",", ".join(result),">")
+        
+# 참고 https://yuna0125.tistory.com/2
