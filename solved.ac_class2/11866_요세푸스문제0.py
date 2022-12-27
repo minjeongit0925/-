@@ -31,10 +31,41 @@ count = 0
 
 for i in range(len(people)):
     count += K - 1
-    if count >= len(people):
-        count = count % len(people) # 
-    result.append(str(people.pop(count)))
+    if count >= len(people): # 배열의 길이보다 길어지는 것을 방지하기 위한 코드
+        count = count % len(people) # 인덱스를 배열의 길이로 나눈 나머지로 바꾼다.
+    result.append(people.pop(count))
 
-print("<",", ".join(result),">")
+print("<", end='')
+for i in range(len(result)-1):
+    print("%d, "%result[i], end='')
+print(result[-1], end='')
+print(">")
+
         
 # 참고 https://yuna0125.tistory.com/2
+
+
+'''
+    # deque활용한 방법
+    # 참고 https://hongcoding.tistory.com/41
+    from collections import deque
+
+    queue = deque()
+    answer = []
+
+    n, k = map(int, input().split())
+
+    for i in range(1, n+1):
+        queue.append(i)
+
+    while queue:
+        for i in range(k-1):
+            queue.append(queue.popleft())
+        answer.append(queue.popleft())
+
+    print("<",end='')
+    for i in range(len(answer)-1):
+        print("%d, "%answer[i], end='')
+    print(answer[-1], end='')
+    print(">")
+'''
