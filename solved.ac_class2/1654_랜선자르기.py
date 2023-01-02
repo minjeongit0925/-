@@ -15,3 +15,11 @@
 '''
     N개를 만들 수 있는 랜선의 최대 길이
 '''
+
+# 이분탐색을 활용하면 될 것 같다..
+K, N = map(int, input().split())
+lenList = []
+
+for _ in range(K):
+    lenList.append(int(input()))
+
