@@ -23,3 +23,16 @@ lenList = []
 for _ in range(K):
     lenList.append(int(input()))
 
+start = 1
+end = max(lenList)
+
+while(start <= end):
+    mid = (start+end) // 2
+    count = 0
+    for i in range(K):
+        count += lenList[i] // mid
+    if count >= N: # 잘라진 랜선 개수가 n보다 많으면, mid 밑으로는 보지 않아도 된다.
+        start = mid + 1
+    else:
+        end = mid - 1
+print(end) # 최대 랜선 길이
