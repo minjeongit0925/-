@@ -17,12 +17,10 @@ import sys
 
 M, N = map(int, sys.stdin.readline().split())
 nums = []
-while True:
-    if M > N:
-        break
-    for i in range(N-M+1):
-        nums.append(M)
-        M += 1
+for i in range(N-M+1):
+    nums.append(M)
+    M += 1
+    
 answer = []
 
 for num in nums:
