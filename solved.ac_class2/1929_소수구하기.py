@@ -20,17 +20,17 @@ nums = []
 for i in range(N-M+1):
     nums.append(M)
     M += 1
-    
+
 answer = []
 
+def isPrime(num):
+    if num == 1:
+        return False
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    return True
+    
 for num in nums:
-    nonAns = 0
-    if num > 1: # 숫자가 1보다는 커야함.
-        for i in range(2, num): # 2부터 자기자신-1까지 나누기 시작함.
-            if num % i == 0: # 나머지가 0 이면 약수가 1과 자기자신 외에 있는 것
-                nonAns += 1 # 답이 아님.
-        if nonAns == 0: # 몫이 없는 경우 이 숫자는 소수임.
-            answer.append(num)
-
-for result in answer:
-    print(result)
+    if isPrime(num):
+        print(num)
