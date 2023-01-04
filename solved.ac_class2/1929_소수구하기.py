@@ -14,6 +14,7 @@
 '''
 
 import sys
+import math
 
 M, N = map(int, sys.stdin.readline().split())
 nums = []
@@ -26,11 +27,14 @@ answer = []
 def isPrime(num):
     if num == 1:
         return False
-    for i in range(2, num):
-        if num % i == 0:
-            return False
-    return True
+    else:
+        for i in range(2, int(math.sqrt(num))+1):
+            if num % i == 0:
+                return False
+        return True
     
 for num in nums:
     if isPrime(num):
         print(num)
+
+# 시간초과 해결 방법: 숫자의 제곱근까지만 검사하면 된다.
