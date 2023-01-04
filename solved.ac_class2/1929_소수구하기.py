@@ -14,13 +14,8 @@
 '''
 
 import sys
-import math
 
 M, N = map(int, sys.stdin.readline().split())
-nums = []
-for i in range(N-M+1):
-    nums.append(M)
-    M += 1
 
 answer = []
 
@@ -28,12 +23,12 @@ def isPrime(num):
     if num == 1:
         return False
     else:
-        for i in range(2, int(math.sqrt(num))+1):
+        for i in range(2, int(num**0.5)+1):
             if num % i == 0:
                 return False
         return True
     
-for num in nums:
+for num in range(M, N+1):
     if isPrime(num):
         print(num)
 
