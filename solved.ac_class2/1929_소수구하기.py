@@ -23,10 +23,8 @@ while True:
     for i in range(N-M+1):
         nums.append(M)
         M += 1
-print(nums)
 answer = []
 
-'''
 for num in nums:
     nonAns = 0
     if num > 1: # 숫자가 1보다는 커야함.
@@ -35,4 +33,6 @@ for num in nums:
                 nonAns += 1 # 답이 아님.
         if nonAns == 0: # 몫이 없는 경우 이 숫자는 소수임.
             answer.append(num)
-'''
+
+for result in answer:
+    print(result)
