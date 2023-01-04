@@ -19,3 +19,11 @@
     불가능한 경우 NO
 '''
 
+n = int(input())
+numList = []
+
+for _ in range(n):
+    num = int(input())
+    numList.append(num)
+
+print(numList)
