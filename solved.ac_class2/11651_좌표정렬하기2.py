@@ -24,7 +24,7 @@ for _ in range(N):
     x, y = map(int, sys.stdin.readline().split())
     locations.append([x, y])
 
-locations.sort(key = lambda x: (x[1], x[0]))
+locations.sort(key = lambda x: (x[1], x[0])) # lambda 이용해서 y좌표 기준으로 정렬하기
 
 for i in range(len(locations)):
     print(locations[i][0], locations[i][1])
