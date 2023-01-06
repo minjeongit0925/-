@@ -15,3 +15,22 @@
 '''
     재민이가 최종적으로 적어 낸 수의 합 출력
 '''
+
+import sys
+
+K = int(sys.stdin.readline())
+nums = []
+sum = 0
+
+for _ in range(K):
+    num = int(sys.stdin.readline())
+    if num != 0:
+        nums.append(num)
+    else:
+        nums.pop()
+
+
+for num in nums:
+    sum += num
+
+print(sum)
