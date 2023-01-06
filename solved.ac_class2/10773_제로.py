@@ -25,9 +25,9 @@ sum = 0
 for _ in range(K):
     num = int(sys.stdin.readline())
     if num != 0:
-        nums.append(num)
+        nums.append(num) # 배열에 넣기
     else:
-        nums.pop()
+        nums.pop() # 배열의 맨 마지막 요소 빼기
 
 
 for num in nums:
