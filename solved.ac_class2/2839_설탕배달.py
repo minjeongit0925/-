@@ -17,3 +17,17 @@
     만약, 정확하게 N킬로그램을 만들 수 없다면 -1을 출력한다.
 '''
 
+import sys
+
+N = int(sys.stdin.readline())
+
+bag = 0
+while N >= 0:
+    if N % 5 == 0:
+        bag += (N // 5) # 몫을 더한다.
+        print(bag)
+        break
+    N -= 3
+    bag += 1
+else:
+    print(-1)
