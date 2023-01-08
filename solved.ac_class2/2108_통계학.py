@@ -22,4 +22,35 @@
     범위
 '''
 
+import sys 
+from collections import Counter
 
+sum = 0
+
+N = int(sys.stdin.readline())
+nums = []
+for _ in range(N):
+    num = int(sys.stdin.readline())
+    nums.append(num)
+nums.sort()
+
+# 산술평균
+for i in nums:
+    sum += i
+    result = sum // N
+print(round(result))
+
+# 중앙값
+print(nums[int(N//2)])
+
+# 최빈값_N개의 수들 중 가장 많이 나타나는 값
+def modefinder(numbers):
+    count = Counter(numbers).most_common()
+    if len(count) > 1 and count[0][1] == count[1][1]:
+        print(count[1][0])
+    else:
+        print(count[0][0])
+modefinder(nums)
+
+# 범위
+print(max(nums) - min(nums))
