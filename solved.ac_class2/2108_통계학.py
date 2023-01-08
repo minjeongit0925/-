@@ -25,8 +25,6 @@
 import sys 
 from collections import Counter
 
-sum = 0
-
 N = int(sys.stdin.readline())
 nums = []
 for _ in range(N):
@@ -35,10 +33,7 @@ for _ in range(N):
 nums.sort()
 
 # 산술평균
-for i in nums:
-    sum += i
-    result = sum // N
-print(round(result))
+print(round(sum(nums)/N))
 
 # 중앙값
 print(nums[int(N//2)])
