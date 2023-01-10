@@ -26,6 +26,7 @@
 n = int(input())
 numList = []
 cnt = 1
+flag = 0 # 불가능한 경우와 가능한 경우를 나눠주기 위한 플래그
 result = []
 
 for _ in range(n):
@@ -35,4 +36,14 @@ for _ in range(n):
         result.append("+")
         cnt += 1
 
-print(numList)
+    if numList[-1] == num:
+        numList.pop()
+        result.append("-")
+    else:
+        print("NO")
+        flag = 1
+        break
+
+if flag == 0:
+    for i in result:
+        print(i)
