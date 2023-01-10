@@ -40,10 +40,10 @@ for _ in range(n):
         numList.pop()
         result.append("-")
     else:
-        print("NO")
+        print("NO") # 불가능한 경우
         flag = 1
         break
 
-if flag == 0:
+if flag == 0: # 가능한 경우
     for i in result:
         print(i)
