@@ -18,12 +18,21 @@
     pop -
     불가능한 경우 NO
 '''
+# 참고
+'''
+    https://hongcoding.tistory.com/39
+'''
 
 n = int(input())
 numList = []
+cnt = 1
+result = []
 
 for _ in range(n):
     num = int(input())
-    numList.append(num)
+    while cnt <= num:
+        numList.append(cnt)
+        result.append("+")
+        cnt += 1
 
 print(numList)
