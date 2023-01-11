@@ -17,4 +17,16 @@
 '''
     각 테스트 케이스에 대해 문서가 몇 번째로 인쇄되는지 출력한다.
 '''
+# N = 문서의 개수, importance = 문서의 중요도
+# M = 몇 번째로 인쇄되었는지 궁금한 문서가 현재 Queue에서 몇 번째에 놓여 있는지
+testcase = int(input())
+
+for _ in range(testcase):
+    N, M = map(int, input().split())
+    importance = list(map(int, input().split()))
+    print(importance)
+
+
+
+    importance = []
 
