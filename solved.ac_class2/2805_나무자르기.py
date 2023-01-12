@@ -16,3 +16,8 @@
     적어도 M미터의 나무를 집에 가져가기 위해서 절단기에 설정할 수 있는 높이의 최댓값을 출력한다.
 '''
 
+import sys
+
+N, M = map(int, sys.stdin.readline().split())
+trees = list(map(int, sys.stdin.readline().split()))
+
