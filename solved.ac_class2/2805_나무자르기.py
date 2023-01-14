@@ -15,10 +15,24 @@
 '''
     적어도 M미터의 나무를 집에 가져가기 위해서 절단기에 설정할 수 있는 높이의 최댓값을 출력한다.
 '''
-
+# 이분탐색의 기본
 import sys
 
 N, M = map(int, sys.stdin.readline().split())
 trees = list(map(int, sys.stdin.readline().split()))
 
-tree = max(trees)
+start = 1
+end = sum(trees)
+
+while start <= end:
+    mid = (start + end) // 2
+    cnt = 0
+
+    for tree in trees:
+        if tree > mid:
+            cnt += tree - mid
+    if cnt >= M:
+        start = mid + 1
+    else:
+        end = mid - 1
+print(end)
