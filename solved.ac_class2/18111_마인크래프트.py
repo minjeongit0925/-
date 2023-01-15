@@ -24,3 +24,13 @@
     첫째 줄에 땅을 고르는데 걸리는 시간과 땅의 높이를 출력하시오.
     답이 여러 개 있다면 그 중에서 땅의 높이가 가장 높은 것을 출력하시오.
 '''
+
+import sys
+
+N, M, B = map(int, sys.stdin.readline().split())
+lands = [0 for _ in range(N)]
+
+for i in range(N):
+    lands[i] = list(map(int, sys.stdin.readline().split()))
+
+
