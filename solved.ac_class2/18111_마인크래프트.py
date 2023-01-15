@@ -33,4 +33,6 @@ lands = [0 for _ in range(N)]
 for i in range(N):
     lands[i] = list(map(int, sys.stdin.readline().split()))
 
+# 2차원배열 요소들의 평균을 구한다.
+# 평균을 정수로 만든다. -> 소수점 뒷자리 버리기
 
