@@ -24,8 +24,10 @@
     첫째 줄에 땅을 고르는데 걸리는 시간과 땅의 높이를 출력하시오.
     답이 여러 개 있다면 그 중에서 땅의 높이가 가장 높은 것을 출력하시오.
 '''
+# 브루트포스 알고리즘
 
 import sys
+from math import inf
 
 N, M, B = map(int, sys.stdin.readline().split())
 lands = [0 for _ in range(N)]
@@ -34,5 +36,25 @@ for i in range(N):
     lands[i] = list(map(int, sys.stdin.readline().split()))
 
 # 2차원배열 요소들의 평균을 구한다.
-# 평균을 정수로 만든다. -> 소수점 뒷자리 버리기
+height = 0
+result = inf
 
+for i in range(257):
+    max = 0
+    min = 0
+    for j in range(N):
+        for k in range(M):
+            if lands[j][k] < i:
+                min += i - lands[j][k]
+            else:
+                max += lands[j][k] - i
+    inventroy = max + B
+
+    if inventroy < min:
+        continue
+    time = 2 * max + min
+
+    if time <= result:
+        result = time
+        height = i
+print(result, height)
