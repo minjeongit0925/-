@@ -25,6 +25,12 @@
     답이 여러 개 있다면 그 중에서 땅의 높이가 가장 높은 것을 출력하시오.
 '''
 # 브루트포스 알고리즘
+# pypy3로 채점함.
+
+# 도움
+'''
+    https://thflgg133.tistory.com/88
+'''
 
 import sys
 from math import inf
