@@ -13,3 +13,11 @@
     첫째 줄에 구한 0의 개수를 출력한다.
 '''
 
+import sys
+
+N = int(sys.stdin.readline())
+factorial = 1
+
+for i in range(1, N+1):
+    factorial = factorial * i
+
