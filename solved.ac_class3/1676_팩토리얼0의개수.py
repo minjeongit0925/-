@@ -23,16 +23,16 @@ cnt = 0
 for i in range(1, N+1):
     factorial = factorial * i
 
-for i in str(factorial):
+for i in str(factorial): # 팩토리얼 계산한 값 각 자리수 배열에 ㅜ가
     num.append(i)
 
-num.reverse()
+num.reverse() # 뒤에서부터 0의 개수를 세는 것이기에 뒤집음.
 
 for i in range(len(num)):
-    if num[i] == '0':
-        cnt += 1
-    else:
-        break
+    if num[i] == '0': # '0'이라면
+        cnt += 1 # 개수 세기
+    else: # 아니라면
+        break # 나오기
 
 print(cnt)
 
