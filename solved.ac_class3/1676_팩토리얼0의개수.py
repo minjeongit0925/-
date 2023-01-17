@@ -21,3 +21,11 @@ factorial = 1
 for i in range(1, N+1):
     factorial = factorial * i
 
+# 5의 배수 10의 배수 1개, 25의 배수 10의 배수 2개, 125의 배수 10의 배수 3개
+# 5의 개수 먼저 세고, 25의 개수, 125의 개수를 센다.
+
+count_5 = N // 5
+count_25 = N // 25
+count_125 = N // 125
+
+print(count_5 + count_25 + count_125)
