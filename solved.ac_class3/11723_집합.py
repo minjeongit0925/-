@@ -27,35 +27,29 @@ S = set()
 
 for i in range(M):
     orders = sys.stdin.readline().split()
-    order = orders[0]
+
+    if len(orders) == 1:
+        order = orders[0]
+    else:
+        order, x = orders
 
     if order == "add":
-        x = orders[1]
-        if x in S:
-            continue
-        else:
-            S.add(x)
+        S.add(int(x))
         
     elif order == "remove":
-        x = orders[1]
-        if x in S:
-            S.remove(x)
-        else:
-            continue
+        S.remove(int(x))
     
     elif order == "check":
-        x = orders[1]
-        if x in S:
+        if int(x) in S:
             print(1)
         else:
             print(0)
     
     elif order == "toggle":
-        x = orders[1]
-        if x in S:
-            S.remove(x)
+        if int(x) in S:
+            S.remove(int(x))
         else:
-            S.add(x)
+            S.add(int(x))
     
     elif order == "all":
         S = {1,2,3,4,5,6,7,8,9,10,
