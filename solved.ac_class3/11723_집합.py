@@ -26,34 +26,34 @@ M = int(sys.stdin.readline())
 S = set()
 
 for i in range(M):
-    orders = sys.stdin.readline().split()
+    orders = sys.stdin.readline().strip().split()
 
     if len(orders) == 1:
-        order = orders[0]
-    else:
-        order, x = orders
+        if orders[0] == "all":
+            S = set([i for i in range(1, 21)])
+        else:
+            S = set()
+        continue
 
-    if order == "add":
-        S.add(int(x))
+    else:
+        order, x = orders[0], orders[1]
+        num = int(x)
+
+        if order == "add":
+            S.add(num)
+            
+        elif order == "remove":
+            S.discard(num) # 요소가 없어도 에러가 나지 않는 함수
         
-    elif order == "remove":
-        S.remove(int(x))
-    
-    elif order == "check":
-        if int(x) in S:
-            print(1)
-        else:
-            print(0)
-    
-    elif order == "toggle":
-        if int(x) in S:
-            S.remove(int(x))
-        else:
-            S.add(int(x))
-    
-    elif order == "all":
-        S = {1,2,3,4,5,6,7,8,9,10,
-             11,12,13,14,15,16,17,18,19,20}
-    
-    elif order == "empty":
-        S.clear()
+        elif order == "check":
+            if num in S:
+                print(1)
+            else:
+                print(0)
+        
+        elif order == "toggle":
+            if num in S:
+                S.discard(num)
+            else:
+                S.add(num)
+        
