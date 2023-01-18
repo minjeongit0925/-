@@ -20,3 +20,47 @@
     check 연산이 주어질 때마다, 결과를 출력한다.
 '''
 
+import sys
+
+M = int(sys.stdin.readline())
+S = []
+
+for i in range(M):
+    orders = sys.stdin.readline().split()
+    order = orders[0]
+
+    if order == "add":
+        x = orders[1]
+        if x in S:
+            continue
+        else:
+            S.append(x)
+        
+    elif order == "remove":
+        x = orders[1]
+        if x in S:
+            S.remove(x)
+        else:
+            continue
+    
+    elif order == "check":
+        x = orders[1]
+        if x in S:
+            print(1)
+        else:
+            print(0)
+    
+    elif order == "toggle":
+        x = orders[1]
+        if x in S:
+            S.remove(x)
+        else:
+            S.append(x)
+    
+    elif order == "all":
+        S = []
+        for i in range(1, 21):
+            S.append(str(i))
+    
+    elif order == "empty":
+        S = []
