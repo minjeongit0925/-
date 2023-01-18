@@ -23,7 +23,7 @@
 import sys
 
 M = int(sys.stdin.readline())
-S = []
+S = set()
 
 for i in range(M):
     orders = sys.stdin.readline().split()
@@ -34,7 +34,7 @@ for i in range(M):
         if x in S:
             continue
         else:
-            S.append(x)
+            S.add(x)
         
     elif order == "remove":
         x = orders[1]
@@ -55,12 +55,11 @@ for i in range(M):
         if x in S:
             S.remove(x)
         else:
-            S.append(x)
+            S.add(x)
     
     elif order == "all":
-        S = []
-        for i in range(1, 21):
-            S.append(str(i))
+        S = {1,2,3,4,5,6,7,8,9,10,
+             11,12,13,14,15,16,17,18,19,20}
     
     elif order == "empty":
-        S = []
+        S.clear()
