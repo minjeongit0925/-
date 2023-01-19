@@ -22,20 +22,22 @@
 '''
 import sys
 
-poketmon = []
+poketmon_id = {}
+poketmon_name = {}
 
-N, M = map(int, sys.stdin.readline().split())
-for _ in range(N):
-    name = sys.stdin.readline()
-    poketmon.append(name)
+N, M = map(int, sys.stdin.readline().rstrip().split())
+for i in range(1, N+1):
+    name = sys.stdin.readline().rstrip()
+    poketmon_id[i] = name
+    poketmon_name[name] = i
+
 
 for _ in range(M):
-    problem = input()
+    problem = sys.stdin.readline().rstrip()
     if problem.isdigit(): # true 라고 해도 데이터타입은 str이므로 int로 변환후 연산해야함.
         # 숫자일 경우
-        num = int(problem)
-        print(poketmon[num-1])
+        print(poketmon_id[int(problem)])
     elif problem.isalpha():
         # 문자일 경우
-        print(poketmon.index(problem)+1)
+        print(poketmon_id[problem])
         
