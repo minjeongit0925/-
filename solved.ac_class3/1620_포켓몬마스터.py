@@ -20,4 +20,22 @@
     입력으로 숫자가 들어왔다면 그 숫자에 해당하는 포켓몬의 이름을,
     문자가 들어왔으면 그 포켓몬의 이름에 해당하는 번호를 출력해라.
 '''
+import sys
 
+poketmon = []
+
+N, M = map(int, sys.stdin.readline().split())
+for _ in range(N):
+    name = sys.stdin.readline()
+    poketmon.append(name)
+
+for _ in range(M):
+    problem = input()
+    if problem.isdigit(): # true 라고 해도 데이터타입은 str이므로 int로 변환후 연산해야함.
+        # 숫자일 경우
+        num = int(problem)
+        print(poketmon[num-1])
+    elif problem.isalpha():
+        # 문자일 경우
+        print(poketmon.index(problem)+1)
+        
