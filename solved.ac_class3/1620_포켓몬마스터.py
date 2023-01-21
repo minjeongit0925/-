@@ -22,29 +22,28 @@
 '''
 # rstrip(): 공백 제거 
 
+import sys
+
+N, M = map(int, sys.stdin.readline().rstrip().split())
+
+poketmon_id = {}
+poketmon_name = {}
+
+for i in range(1, N+1):
+    name = sys.stdin.readline().rstrip()
+    poketmon_id[i] = name
+    poketmon_name[name] = i
+
+for _ in range(M):
+    problem = sys.stdin.readline().rstrip()
+    if problem.isdigit(): # true 라고 해도 데이터타입은 str이므로 int로 변환후 연산해야함.
+        # 숫자일 경우
+        print(poketmon_id[int(problem)])
+    else:
+        # 문자일 경우
+        print(poketmon_name[problem])
+
 '''
-    import sys
-
-    N, M = map(int, sys.stdin.readline().rstrip().split())
-
-    poketmon_id = {}
-    poketmon_name = {}
-
-    for i in range(1, N+1):
-        name = sys.stdin.readline().rstrip()
-        poketmon_id[i] = name
-        poketmon_name[name] = i
-
-    for _ in range(M):
-        problem = sys.stdin.readline().rstrip()
-        if problem.isdigit(): # true 라고 해도 데이터타입은 str이므로 int로 변환후 연산해야함.
-            # 숫자일 경우
-            print(poketmon_id[int(problem)])
-        else:
-            # 문자일 경우
-            print(poketmon_name[problem])
-'''
-
 import sys
 
 N, M = map(int, sys.stdin.readline().rstrip().split())
@@ -65,3 +64,4 @@ for _ in range(M):
     else:
         # 문자일 경우
         print(poketmon_name[problem])
+'''
