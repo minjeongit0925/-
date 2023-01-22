@@ -17,3 +17,8 @@
 '''
     첫째 줄에 각 사람이 돈을 인출하는데 필요한 시간의 합의 최솟값을 출력한다.
 '''
+
+import sys
+
+N = int(sys.stdin.readline())
+Pi = list(map(int, sys.stdin.readline().split()))
