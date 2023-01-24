@@ -29,5 +29,5 @@ Pi = list(map(int, sys.stdin.readline().split()))
 Pi.sort()
 
 for i in range(1, N+1):
-    ans += sum(Pi[0:i])
+    ans += sum(Pi[0:i]) # 0부터 i까지의 합
 print(ans)
