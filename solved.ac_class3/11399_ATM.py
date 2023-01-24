@@ -20,5 +20,14 @@
 
 import sys
 
+ans = 0
+
 N = int(sys.stdin.readline())
 Pi = list(map(int, sys.stdin.readline().split()))
+
+# 인출 시간이 적은 순으로 정렬
+Pi.sort()
+
+for i in range(1, N+1):
+    ans += sum(Pi[0:i])
+print(ans)
