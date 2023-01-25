@@ -17,3 +17,16 @@
     듣보잡의 수와 그 명단을 사전순으로 출력한다.
 '''
 
+import sys
+
+no_hear_list = []
+no_see_list = []
+
+N, M = map(int, sys.stdin.readline().split())
+for _ in range(N):
+    name_no_hear = sys.stdin.readline().strip()
+    no_hear_list.append(name_no_hear)
+for _ in range(M):
+    name_no_see = sys.stdin.readline().strip()
+    no_see_list.append(name_no_see)
+
