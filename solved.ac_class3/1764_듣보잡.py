@@ -19,14 +19,20 @@
 
 import sys
 
-no_hear_list = []
-no_see_list = []
+no_hear_list = set()
+no_see_list = set()
+cnt = 0
 
 N, M = map(int, sys.stdin.readline().split())
 for _ in range(N):
     name_no_hear = sys.stdin.readline().strip()
-    no_hear_list.append(name_no_hear)
+    no_hear_list.add(name_no_hear)
 for _ in range(M):
     name_no_see = sys.stdin.readline().strip()
-    no_see_list.append(name_no_see)
+    no_see_list.add(name_no_see)
 
+result = sorted(list(no_hear_list & no_see_list))
+
+print(len(result))
+for i in result:
+    print(i)
