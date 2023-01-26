@@ -17,6 +17,8 @@
     비밀번호를 차례대로 각 줄에 하나씩 출력한다.
 '''
 
+# 시간초과
+'''
 import sys
 
 sitePwd = []
@@ -35,3 +37,20 @@ for x in range(len(findSites)):
     for s in range(len(sitePwd)):
         if findSites[x] == sitePwd[s][0]:
             print(sitePwd[s][1])
+'''
+
+# 딕셔너리 활용해서 간단하게 풀 수 있음.
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+sites = {}
+
+for _ in range(N):
+    site, pw = input().split()
+    sites[site] = pw
+
+
+for _ in range(M):
+    site = input().strip()
+    print(sites[site])
