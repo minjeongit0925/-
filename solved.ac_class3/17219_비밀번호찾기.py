@@ -19,17 +19,19 @@
 
 import sys
 
-sites = set()
-pws = set()
-findSites = set()
+sitePwd = []
+findSites = []
 
 N, M = map(int, sys.stdin.readline().split())
 for _ in range(N):
     site, pw = sys.stdin.readline().strip().split()
-    sites.add(site)
-    pws.add(pw)
+    sitePwd.append([site, pw])
 
 for _ in range(M):
     findSite = sys.stdin.readline().strip()
-    findSites.add(findSite)
+    findSites.append(findSite)
 
+for x in range(len(findSites)):
+    for s in range(len(sitePwd)):
+        if findSites[x] == sitePwd[s][0]:
+            print(sitePwd[s][1])
