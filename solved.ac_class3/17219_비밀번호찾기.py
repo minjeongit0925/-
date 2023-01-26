@@ -17,3 +17,19 @@
     비밀번호를 차례대로 각 줄에 하나씩 출력한다.
 '''
 
+import sys
+
+sites = set()
+pws = set()
+findSites = set()
+
+N, M = map(int, sys.stdin.readline().split())
+for _ in range(N):
+    site, pw = sys.stdin.readline().strip().split()
+    sites.add(site)
+    pws.add(pw)
+
+for _ in range(M):
+    findSite = sys.stdin.readline().strip()
+    findSites.add(findSite)
+
