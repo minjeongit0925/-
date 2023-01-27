@@ -18,3 +18,7 @@
     첫째 줄에 연산을 하는 횟수의 최솟값을 출력한다.
 '''
 
+import sys
+input = sys.stdin.readline
+
+N = int(input())
