@@ -22,3 +22,10 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
+
+if N % 3 == 0:
+    N = N / 3
+    N = N - 1
+elif N % 2 == 0:
+    N = N / 2
+    N = N - 1
