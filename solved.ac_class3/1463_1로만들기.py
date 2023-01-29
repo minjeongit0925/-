@@ -18,27 +18,23 @@
     첫째 줄에 연산을 하는 횟수의 최솟값을 출력한다.
 '''
 
+# 참조
+'''
+    https://hongcoding.tistory.com/46
+'''
+
 import sys
 input = sys.stdin.readline
 
 N = int(input())
-cnt = 0
+dp = [0] * (N + 1)
 
-if N == 1:
-    print(0)
-else:
-    while N > 0:
-        if N == 1:
-            print(cnt)
-            break
+for i in range(2, N + 1):
+    dp[i] = dp[i-1]+1
+    if i % 2 == 0:
+        dp[i] = min(dp[i], dp[i//2] + 1)
+    if i % 3 == 0:
+        dp[i] = min(dp[i], dp[i//3] + 1)
 
-        if N > 1 and N % 3 != 0:
-            N = N - 1
-            cnt += 1
-        elif N > 1 and N % 3 == 0:
-            N = N // 3
-            cnt += 1
-        elif N > 1 and N % 2 == 0:
-            N = N // 2
-            cnt += 1
+print(dp[N])
         
