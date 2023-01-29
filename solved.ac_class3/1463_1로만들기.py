@@ -22,10 +22,23 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
+cnt = 0
 
-if N % 3 == 0:
-    N = N / 3
-    N = N - 1
-elif N % 2 == 0:
-    N = N / 2
-    N = N - 1
+if N == 1:
+    print(0)
+else:
+    while N > 0:
+        if N == 1:
+            print(cnt)
+            break
+
+        if N > 1 and N % 3 != 0:
+            N = N - 1
+            cnt += 1
+        elif N > 1 and N % 3 == 0:
+            N = N // 3
+            cnt += 1
+        elif N > 1 and N % 2 == 0:
+            N = N // 2
+            cnt += 1
+        
