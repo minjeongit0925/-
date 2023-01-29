@@ -23,6 +23,8 @@
     https://hongcoding.tistory.com/46
 '''
 
+# 이전 식을 활용하는 점화식 방법
+
 import sys
 input = sys.stdin.readline
 
