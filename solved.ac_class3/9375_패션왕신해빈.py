@@ -16,3 +16,18 @@
     각 테스트 케이스에 대해 해빈이가 알몸이 아닌 상태로
     의상을 입을 수 있는 경우를 출력하시오.
 '''
+
+import sys
+input = sys.stdin.readline
+
+testcase = int(input())
+for _ in range(testcase):
+
+    cloths = []
+    items = []
+
+    n = int(input())
+    for _ in range(n):
+        suits = list(input().split())
+        cloths.append(suits[0])
+        items.append(suits[1])
