@@ -23,11 +23,18 @@ input = sys.stdin.readline
 testcase = int(input())
 for _ in range(testcase):
 
-    cloths = []
-    items = []
+    cloths = {}
 
     n = int(input())
     for _ in range(n):
         suits = list(input().split())
-        cloths.append(suits[0])
-        items.append(suits[1])
+        if suits[1] in cloths:
+            cloths[suits[1]].append(suits[0])
+        else:
+            cloths[suits[1]] = [suits[0]]
+    cnt = 1
+
+    for i in cloths:
+        cnt *= (len(cloths[i]) + 1)
+        
+    print(cnt - 1)
