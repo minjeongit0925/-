@@ -35,6 +35,6 @@ for _ in range(testcase):
     cnt = 1
 
     for i in cloths:
-        cnt *= (len(cloths[i]) + 1)
-        
-    print(cnt - 1)
+        cnt *= (len(cloths[i]) + 1) # 옷을 고르는 공식 (a 종류수 + 1) * (b 종류수 + 1) * (c 종류수 + 1) .. - 1
+
+    print(cnt - 1) # 모든 의상을 착용하지 않은 경우 제외
