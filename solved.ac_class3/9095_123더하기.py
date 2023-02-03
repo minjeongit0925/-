@@ -15,3 +15,8 @@
     n을 1, 2, 3의 합으로 나타내는 방법의 수를 출력한다.
 '''
 
+import sys
+input = sys.stdin.readline
+
+T = int(input())
+n = int(input())
