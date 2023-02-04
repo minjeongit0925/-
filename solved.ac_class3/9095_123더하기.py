@@ -20,3 +20,7 @@ input = sys.stdin.readline
 
 T = int(input())
 n = int(input())
+
+# n을 1, 2, 3 의 합으로 나타내는 방법
+# ex) 6 = 1 + 2 + 3
+# 1은 무조건 1개 이상.
