@@ -25,4 +25,4 @@ score = []
 num = int(input())
 for _ in range(num):
     score.append(int(input()))
-print(score)
+
