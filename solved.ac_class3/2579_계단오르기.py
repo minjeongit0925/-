@@ -21,8 +21,10 @@
 import sys
 input = sys.stdin.readline
 score = []
+result = 0
 
 num = int(input())
 for _ in range(num):
     score.append(int(input()))
 
+result += score[-1] # 마지막 계단은 꼭 밟아야한다.
