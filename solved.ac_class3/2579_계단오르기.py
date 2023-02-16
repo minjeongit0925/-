@@ -28,3 +28,4 @@ for _ in range(num):
     score.append(int(input()))
 
 result += score[-1] # 마지막 계단은 꼭 밟아야한다.
+# 경우의 수를 따져보자.
