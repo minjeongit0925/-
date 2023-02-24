@@ -15,3 +15,12 @@
 '''
     각 테스트 케이스마다 P(N)을 출력한다.
 '''
+
+import sys
+
+input = sys.stdin.readline
+
+T = int(input())
+for _ in range(T):
+    N = int(input())
+    
