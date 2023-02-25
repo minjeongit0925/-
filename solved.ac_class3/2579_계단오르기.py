@@ -27,13 +27,4 @@ num = int(input())
 for _ in range(num):
     score.append(int(input()))
 
-result += score[-1] # 마지막 계단은 꼭 밟아야한다.
-# 경우의 수를 따져보자.
-# 규칙에 의해서 안되는 경우들
-# 1. 하나하나둘
-# 2. 하나둘하나
-# 3. 하나둘둘
-# 4. 둘둘
-# 5. 둘하나둘
-# 이 경우들을 어떤 식으로 나타내면 좋을까
-# 경우의 수를 나누는 switch 문?
+result += score[-1] 
