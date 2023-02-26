@@ -27,4 +27,6 @@ num = int(input())
 for _ in range(num):
     score.append(int(input()))
 
-result += score[-1] 
+# 점화식 사용
+# 점화식이란? : 이웃하는 두개의 항 사이에 성립하는 관계를 나타낸 관계식이다.
+
