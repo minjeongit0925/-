@@ -27,6 +27,15 @@ num = int(input())
 for _ in range(num):
     score.append(int(input()))
 
+dp = [0]*(num) # dp 리스트
+
+# 계단이 2개 이하일 때
+if len(score) <= 2:
+    print(sum(score))
+
+# 계단이 3개 이상일 때
+
+
 # 점화식 사용
 # 점화식이란? : 이웃하는 두개의 항 사이에 성립하는 관계를 나타낸 관계식이다.
 
