@@ -34,7 +34,18 @@ if len(score) <= 2:
     print(sum(score))
 
 # 계단이 3개 이상일 때
+else:
+    dp[0] = score[0]
+    dp[1] = score[0]+score[1]
+    for i in range(2, num):
+        dp[i]=max(dp[i-3]+score[i-1]+score[i], dp[i-2]+score[i])
+    print(dp[-1])
 
+'''
+1. dp[i-3]+s[i-1]+s[i] : i-3까지의 계단 점수 최댓값과 i-1, i 계단의 합.
+2. dp[i-2]+s[i] : i-2까지의 계단 점수 최댓값과 i 계단의 합.
+'''
+# 위의 두개를 비교해서 최댓값을 찾는다.
 
 # 점화식 사용
 # 점화식이란? : 이웃하는 두개의 항 사이에 성립하는 관계를 나타낸 관계식이다.
