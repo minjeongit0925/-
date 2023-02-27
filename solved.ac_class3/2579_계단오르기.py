@@ -39,7 +39,7 @@ else:
     dp[1] = score[0]+score[1]
     for i in range(2, num):
         dp[i]=max(dp[i-3]+score[i-1]+score[i], dp[i-2]+score[i])
-    print(dp[-1])
+    print(dp[-1]) # 마지막 값 출력
 
 '''
 1. dp[i-3]+s[i-1]+s[i] : i-3까지의 계단 점수 최댓값과 i-1, i 계단의 합.
