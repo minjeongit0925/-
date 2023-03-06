@@ -18,3 +18,12 @@
     1번 컴퓨터를 통해 웜 바이러스에 걸리게 되는 컴퓨터의 수를 
     첫째 줄에 출력한다.
 '''
+
+import sys
+
+input = sys.stdin.readline
+com = int(input())
+pairs = int(input())
+for _ in range(pairs):
+    pair = map(int, input().split())
+    
