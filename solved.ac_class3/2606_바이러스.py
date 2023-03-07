@@ -27,3 +27,5 @@ pairs = int(input())
 for _ in range(pairs):
     pair = map(int, input().split())
     
+# 1번 컴퓨터가 웜 바이러스에 걸렸을 때 
+
