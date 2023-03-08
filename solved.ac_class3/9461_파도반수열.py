@@ -24,3 +24,4 @@ T = int(input())
 for _ in range(T):
     N = int(input())
     
+# 정삼각형의 변의 길이를 늘려가야 한다.
