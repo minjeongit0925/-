@@ -16,14 +16,20 @@
     각 테스트 케이스마다 P(N)을 출력한다.
 '''
 
-import sys
+# i = 1일 때, i번째 숫자와 i + 1 번째 숫자를 더한 값을 i + 3번째에 놓게 된다.
 
-input = sys.stdin.readline
+list = [0 for i in range(101)]
+list[1] = 1
+list[2] = 1
+list[3] = 1
+for i in range(0, 98):
+    list[i + 3]= list[i] + list[i+ 1]
 
 T = int(input())
-for _ in range(T):
+for i in range(T):
     N = int(input())
+    print(list(N))
     
 # 정삼각형의 변의 길이를 늘려가야 한다.
 # 수열처럼 늘어남.
-# 1 -> 2 -> 3 -> 5 -> 8 ... 
+# 1, 1, 1, 2, 2, 3, 4, 5, 7, 9 ...
