@@ -18,17 +18,15 @@
 
 # i = 1일 때, i번째 숫자와 i + 1 번째 숫자를 더한 값을 i + 3번째에 놓게 된다.
 
-list = [0 for i in range(101)]
-list[1] = 1
-list[2] = 1
-list[3] = 1
-for i in range(0, 98):
-    list[i + 3]= list[i] + list[i+ 1]
-
-T = int(input())
-for i in range(T):
-    N = int(input())
-    print(list(N))
+t = int(input())
+ 
+li = [1,1,1,2,2]
+for i in range(5, 100):
+    li.append(li[i-1]+li[i-5])
+ 
+for _ in range(t):
+    n = int(input())
+    print(li[n-1])
     
 # 정삼각형의 변의 길이를 늘려가야 한다.
 # 수열처럼 늘어남.
