@@ -53,3 +53,4 @@ for n in range(N-7):
         result.append(W_first)
 
 print(min(result))
+
